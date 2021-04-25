@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <script>
+            function Goor() {
+			
+			var na = document.getElementById("name").value;
+			var te = document.getElementById("telephone").value;
+	        var qu = document.getElementById("query").value;
+
+             if(na=="" || na==null){
+			 alert("please enter name");
+			 }  
+               
+			  else if(te=="" || te==null){
+			 alert("please entertelephone number");
+			 }  
+			else  if(qu.length==0){
+			 alert("please enter query");
+			 } 
+else
+{
+alert("success");
+}			 
+            }
+        </script>
+  
+        <style>
+            div {
+                box-sizing: border-box;
+                width: 100%;
+                border: 100px solid black;
+                float: left;
+                align-content: center;
+                align-items: center;
+            }
+  
+            form {
+                margin: 0 auto;
+                width: 600px;
+            }
+			body{
+			
+			border-style: solid;
+			background-color: lightblue;
+			}
+			
+ 
+</style>
+        </style>
+    </head>
+  
+    <body>
+        <h1 style="text-align: center;">Do You Want To Say Anything????</h1>
+  <form>
+            <p>Name: <br>
+			<input type="text"   size="65" name="Name" id="name" /></p>
+            <br />
+           
+            <p>mail: <br>
+			<input type="text" size="65" name="EMail" id="mail" required /></p>
+            <br />
+           
+			
+            <p>Telephone:<br>
+			<input type="text" size="65" name="Telephone" id="telephone" /></p>
+            <br />
+  
+            <p>
+                      <br />
+			 <p>Rate Our Services:</p>
+  <input type="radio" id="male" name="gender" value="Good">
+  <label for="male">Good</label>
+  <input type="radio" id="average" name="gender" value="average">
+  <label for="male">average</label>
+  <input type="radio" id="Bad" name="gender" value="Bad">
+  <label for="female">Bad</label><br>
+            <br />
+  
+            <p>Please mention your query below:<br>
+			<textarea cols="80" name="Comment" id="query"></textarea></p>
+            <p>
+                <input type="submit" 
+                       value="send" name="Submit" onclick="Goor()" />
+                <input type="reset" 
+                       value="Reset" name="Reset" />
+            </p>
+      </form>
+    </body>
+</html>
+  

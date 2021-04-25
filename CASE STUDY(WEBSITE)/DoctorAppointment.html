@@ -1,0 +1,115 @@
+<html>
+ 
+<head>
+ 
+    <title>Appointment Form</title>
+ 
+    <script type="text/javascript">
+        function validate_form() {
+            if (document.emp.emp_name.value == "") {
+                alert("Please fill your details");
+                return false;
+            }
+            if (document.emp.num.value == "") {
+                alert("Enter your DoctorID");
+                return false;
+            }
+            alert("sucessfully Submitted");
+ 
+ 
+ 
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(document.emp.email_id.value)) {
+                alert("You have entered an invalid email address!")
+                return (false)
+            }
+        }
+ 
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (charCode != 46 && charCode > 31 &&
+                (charCode < 48 || charCode > 57)) {
+                alert("Enter Number");
+                return false;
+            }
+            return true;
+        }
+ 
+ 
+        //-->
+    </script>
+ 
+</head>
+ 
+<body bgcolor="#86CEEB">
+    <form name="emp" action="" onsubmit="return validate_form();" method="post">
+        <table align="center" width=40% width="100%" cellspacing="2" cellpadding="2" border="5">
+            <tr>
+                <td colspan="2" align="center"><b>Book Your Appointment</b></td>
+ 
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">Your DoctorName<span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="text" value="" name="emp_name" size="24"></td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">Your DoctorId<span style="color:red">*</span></td>
+                <td width="57%">
+                    <input type="text" value="" name="num" onkeypress="return isNumberKey(event)" size="24"></td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">Few word about your health</td>
+ 
+                <td width="57%"><textarea rows="4" maxlen="200" name="S2" cols="20"></textarea></td>
+            </tr <tr>
+ 
+            <td align="left" valign="top" width="41%">Contact Number</td>
+            <td width="57%">
+                <input type="text" value="" onkeypress="return isNumberKey(event)" name="txtFName1" size="24"></td>
+            </tr>
+ <tr>
+   <td align="left" valign="top" width="41%">Appointment date</td>
+   <td><input type="date" id="day" id="t5" name="day" required/></td>
+  </tr>
+ 
+ 
+            </tr>
+ 
+            <tr>
+                <td align="left" valign="top" width="41%">Specialization</td>
+                <td width="57%">
+                    <select name="mydropdown">
+<option value="Default">Default</option>
+<option value="Cardiologists">Cardiologists</option>
+<option value="Endrocrinologists">Endrocrinologists</option>
+<option value="Family Physicians">Family Physicians</option>
+<option value="Pediatrists">Pediatrists</option>
+<option value="psychiatrists">psychiatrists</option>
+<option value="Urologists">Urologists</option>
+<option value="gynecologist">gynecologist</option>
+<option value="Homeyo">Homeyo</option>
+<option value="Dentist">Dentist</option>
+ 
+ 
+</select></td>
+ 
+ 
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">Email<span style="color:red">*</span></td>
+                <td width="57%">
+                    <input type="text" value="" name="email_id" size="24"></td>
+            </tr>
+ 
+            <tr>
+                <td colspan="2">
+                    <p align="center">
+                        <input type="submit" value="  Submit" name="B4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="reset" value="  Reset All   " name="B5"></td>
+            </tr>
+ 
+        </table>
+    </form>
+</body>
+ 
+</html>
